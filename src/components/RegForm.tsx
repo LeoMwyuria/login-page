@@ -20,27 +20,27 @@ const RegForm: React.FC = () => {
       const errors: Partial<FormValues> = {};
 
       if (!values.firstName) {
-        errors.firstName = 'Required';
+        errors.firstName = 'First Name cannot be empty';
       } else if (!/^[a-zA-Z]+$/.test(values.firstName)) {
         errors.firstName = 'First name must contain only letters';
       }
 
       if (!values.lastName) {
-        errors.lastName = 'Required';
+        errors.lastName = 'Last Name cannot be empty';
       } else if (!/^[a-zA-Z]+$/.test(values.lastName)) {
         errors.lastName = 'Last name must contain only letters';
       }
 
       if (!values.email) {
-        errors.email = 'Required';
+        errors.email = 'email cannot be empty';
       } else if (
         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
       ) {
-        errors.email = 'Invalid email address';
+        errors.email = 'Looks like this is not an email';
       }
 
       if (!values.password) {
-        errors.password = 'Required';
+        errors.password = 'password cannot be empty';
       } else if (values.password.length < 6) {
         errors.password = 'Password must be at least 6 characters long';
       }
@@ -81,6 +81,7 @@ const RegForm: React.FC = () => {
           type="text"
           onChange={formik.handleChange}
           value={formik.values.firstName}
+          className={formik.errors.firstName ? 'errorInput' : ''}
         />
         {formik.errors.firstName ? (
           <div className="error">{formik.errors.firstName}</div>
@@ -95,6 +96,7 @@ const RegForm: React.FC = () => {
           type="text"
           onChange={formik.handleChange}
           value={formik.values.lastName}
+          className={formik.errors.lastName ? 'errorInput' : ''}
         />
         {formik.errors.lastName ? (
           <div className="error">{formik.errors.lastName}</div>
@@ -104,12 +106,14 @@ const RegForm: React.FC = () => {
       <div className="inputField">
         <label htmlFor="email">Email Address</label>
         <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-        />
+        id="email"
+        name="email"
+        type="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+        placeholder={formik.errors.email ? 'email@example/com' : ''}
+        className={formik.errors.email ? 'errorInput' : ''}
+      />
         {formik.errors.email ? (
           <div className="error">{formik.errors.email}</div>
         ) : null}
@@ -123,6 +127,7 @@ const RegForm: React.FC = () => {
           type="password"
           onChange={formik.handleChange}
           value={formik.values.password}
+          className={formik.errors.password ? 'errorInput' : ''}
         />
         {formik.errors.password ? (
           <div className="error">{formik.errors.password}</div>
