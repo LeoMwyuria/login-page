@@ -1,0 +1,162 @@
+.main{
+  width: 375px;
+height: 933px;
+margin-left: auto;
+margin-right: auto;
+
+padding: 5px;
+
+
+}
+.error{
+  text-align: end;
+}
+body{
+  font-family: 'Poppins';
+  background-image: url('./assets/background.jpg');
+}
+.paragraphs{
+  text-align: center;
+  margin-top: 50px;
+}
+.p1{
+  font-weight: 900;
+}
+.freeTrial{
+  color: white;
+  background: rgba(94, 84, 164, 1);
+  width: 327px;
+  height: 88px;
+border-radius: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+
+.p2{
+width: 194px;
+height: 52px;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+input{
+  outline: 0;
+  width: 279px;
+height: 56px;
+border-radius: 10px;
+border: 1px solid gray;
+
+
+
+
+}
+.login{
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 1);
+border-radius: 10px;
+ margin-left: auto;
+ margin-right: auto;
+  justify-content: center;
+  padding: 10px;
+  width: 327px;
+  
+  height: 593px;
+
+
+}
+.inputDiv{
+  
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  width: 290px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trial{
+  width: 279px;
+height: 56px;
+background: rgba(56, 204, 139, 1);
+color: white;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+align-items: center;
+border-radius: 10px;
+border: 0px;
+}
+.trial:hover{
+  background: rgb(28, 145, 94);
+  cursor: pointer;
+}
+.termServices{
+  
+  font-size: 11px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.error{
+  color: red;
+
+ 
+}
+@media screen and (min-width:1234px){
+  .main{
+    width: 1200px;
+  }
+  .paragraphs{
+    width: 400px;
+  height: 220px;
+  text-align: left;
+  position: relative;
+  top: 200px;
+
+
+  }
+  .p1{
+    font-size: 30px;
+  }
+  .login{
+    position: relative;
+    bottom: 200px;
+    left: 200px;
+    width: 540px;
+  height: 600px;
+
+
+  }
+  .freeTrial{
+    position: relative;
+    width: 540px;
+  height: 60px;
+  bottom: 200px;
+  left: 200px;
+
+
+  }
+  input{
+    width: 500px;
+  height: 56px;
+
+
+  }
+  .termServices{
+    width: 400px;
+  }
+  .trial{
+    width: 500px;
+  }
+ 
+}
